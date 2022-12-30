@@ -7,4 +7,7 @@ struct Node{
 void append(struct Node* head,int data);
 void insertNode(struct Node* head, int pos,int data);
 void printNode(struct Node* head);
+void sortNode(Node* head);
+void reverseNode(Node* head);
+
 
