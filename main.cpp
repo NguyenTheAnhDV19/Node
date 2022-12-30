@@ -40,3 +40,40 @@ void printNode(Node* head){
     }
     std::cout<<pNode->data<<std::endl;
 }
+
+void sortNode(Node* head)
+{
+    Node *a, *b;
+    int c =0;
+    for(a = head; a->next != nullptr; a = a->next){
+        for(b = a->next; b != nullptr;b =b->next )
+        {
+            if(a->data > b->data)
+            {
+                c = a->data;
+                a->data = b->data;
+                b->data = c;
+            }
+        }
+    }
+}
+
+void reverseNode(Node* head)
+{
+
+    Node *a, *b;
+    int c =0;
+    for(a = head; a != nullptr; a= a->next)
+    {
+        for(b = a->next; b!= nullptr; b = b->next)
+        {
+            if(a->data < b->data)
+            {
+                c = a->data;
+                a->data = b->data;
+                b->data = c;
+            }
+        }
+    }
+}
+
